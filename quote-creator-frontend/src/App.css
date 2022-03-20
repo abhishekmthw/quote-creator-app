@@ -1,0 +1,12 @@
+.quote {
+  height: 500px;
+  background-color: black;
+  font-size: 75px;
+  text-align: center;
+  line-height: normal;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
