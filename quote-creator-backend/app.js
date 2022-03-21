@@ -30,6 +30,6 @@ router.post("/download", async (req, res) => {
   res.download("./downloads/quote.png");
 });
 
-app.use("/", router);
+app.use("/api", router);
 
 app.listen(4000, () => console.log("SERVER STARTED"));
