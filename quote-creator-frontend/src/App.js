@@ -7,7 +7,6 @@ import {
   Card,
   TextField,
   hsbToRgb,
-  hsbToHex,
   Button,
 } from "@shopify/polaris";
 import enTranslations from "@shopify/polaris/locales/en.json";
@@ -33,9 +32,8 @@ export default function App() {
       quote,
       colorString,
     };
-    // await axios.post("https://localhost:4000/api/download", req);
     axios({
-      url: "http://localhost:4000/api/download",
+      url: "http://localhost:4000/download",
       method: "POST",
       responseType: "blob",
       data,

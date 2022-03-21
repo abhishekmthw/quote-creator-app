@@ -5,12 +5,14 @@ const bodyParser = require("body-parser");
 const router = express.Router();
 const textToImage = require("text-to-image");
 
+require('dotenv').config();
+
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-router.post("/api/download", async (req, res) => {
+router.post("/download", async (req, res) => {
   await textToImage.generate(req.body.quote, {
     debug: true,
     debugFilename: "./downloads/quote.png",
