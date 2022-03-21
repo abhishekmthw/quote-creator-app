@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-router.post("/download", async (req, res) => {
+router.post("/api/download", async (req, res) => {
   try {
     console.log("API call hit!");
     await textToImage.generate(req.body.quote, {
@@ -35,6 +35,6 @@ router.post("/download", async (req, res) => {
   }
 });
 
-app.use("/api", router);
+app.use("/", router);
 
 app.listen(4000, () => console.log("SERVER STARTED"));

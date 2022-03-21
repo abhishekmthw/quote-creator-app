@@ -33,7 +33,7 @@ export default function App() {
       colorString,
     };
     axios({
-      url: "http://localhost:4000/api/download",
+      url: "http://172.31.24.149:4000/api/download",
       method: "POST",
       responseType: "blob",
       data,
